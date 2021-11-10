@@ -12,12 +12,15 @@ object Config {
         const val androidGradle = "com.android.tools.build:gradle:${Versions.gradleVersion}"
         const val kotlinGradle =
             "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlinVersion}"
+        const val googleUrl = "https://maven.google.com/"
+        const val pluginKtLint = "org.jlleitschuh.gradle.ktlint"
     }
 
     object Plugins {
         const val kotlin = "kotlin"
         const val android = "com.android.application"
         const val kotlinAndroid = "kotlin-android"
+        const val ktLint = "org.jlleitschuh.gradle.ktlint"
     }
 
     const val testRunner = "androidx.test.runner.AndroidJUnitRunner"
