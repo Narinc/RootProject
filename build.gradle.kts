@@ -14,6 +14,18 @@ buildscript {
     }
 }
 
+plugins {
+    id(Config.Plugins.ktLint) version(Versions.ktLintVersion)
+}
+
+allprojects {
+    apply(plugin = Config.ClassPaths.pluginKtLint) // Version should be inherited from parent
+    repositories {
+        mavenCentral()
+        maven(url = Config.ClassPaths.googleUrl)
+    }
+}
+
 tasks.register("clean", Delete::class.java) {
     delete(rootProject.buildDir)
 }
