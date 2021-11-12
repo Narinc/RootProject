@@ -1,7 +1,7 @@
 import dependencies.UiDep
 
 plugins {
-    id(Config.Plugins.android)
+    id(Config.Plugins.androidApplication)
     kotlin(Config.Plugins.kotlinAndroid)
 }
 

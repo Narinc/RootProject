@@ -1,8 +1,9 @@
 plugins {
-    id("com.android.application") apply false
-    id("com.android.library") apply false
-    kotlin("android") apply false
+    id(Config.Plugins.androidApplication) apply false
+    id(Config.Plugins.androidLibrary) apply false
+    kotlin(Config.Plugins.kotlinAndroid) apply false
     id(Config.Plugins.ktLint) version (Versions.ktLintVersion)
+    id(Config.Plugins.detekt) version (Versions.detektVersion)
 }
 
 allprojects {
@@ -16,6 +17,7 @@ allprojects {
 subprojects {
     apply {
         plugin(Config.Plugins.ktLint)
+        plugin(Config.Plugins.detekt)
     }
 
     ktlint {
@@ -29,6 +31,18 @@ subprojects {
         filter {
             exclude("**/generated/**")
             include("**/kotlin/**")
+        }
+    }
+
+    detekt {
+        config = rootProject.files("config/detekt/detekt.yml")
+        tasks.detekt {
+            reports {
+                html {
+                    outputLocation.set(file("build/reports/detekt.html"))
+                    required.set(true) // reports can also be enabled and disabled at the task level as needed
+                }
+            }
         }
     }
 }
