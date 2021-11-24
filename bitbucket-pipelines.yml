@@ -23,9 +23,17 @@ pipelines:
             caches:       # caching speed up subsequent execution https://support.atlassian.com/bitbucket-cloud/docs/cache-dependencies/
               - gradle
             script:
-              - ./gradlew lint
+              - ./gradlew ktlintCheck
             artifacts:
               - app/build/reports/**        # artifacts are files that are produced by a step https://support.atlassian.com/bitbucket-cloud/docs/use-artifacts-in-steps/
+        - step:
+            name: Detekt
+            caches:
+              - gradle
+            script:
+              - ./gradlew detekt
+            artifacts:
+              - app/build/reports/**
         - step:           # step to run unit tests
             name: Unit Tests
             caches:
