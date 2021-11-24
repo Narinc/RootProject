@@ -1,28 +1,49 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
-buildscript {
-    repositories {
-        google()
-        mavenCentral()
-        maven(url = Config.ClassPaths.pluginGradle)
-    }
-    dependencies {
-        classpath(Config.ClassPaths.androidGradle)
-        classpath(Config.ClassPaths.kotlinGradle)
-
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
-    }
-}
-
 plugins {
-    id(Config.Plugins.ktLint) version(Versions.ktLintVersion)
+    id(Config.Plugins.androidApplication) apply false
+    id(Config.Plugins.androidLibrary) apply false
+    kotlin(Config.Plugins.kotlinAndroid) apply false
+    id(Config.Plugins.ktLint) version (Versions.ktLintVersion)
+    id(Config.Plugins.detekt) version (Versions.detektVersion)
 }
 
 allprojects {
-    apply(plugin = Config.ClassPaths.pluginKtLint) // Version should be inherited from parent
+    group = Environments.Release.appId
     repositories {
+        google()
         mavenCentral()
-        maven(url = Config.ClassPaths.googleUrl)
+    }
+}
+
+subprojects {
+    apply {
+        plugin(Config.Plugins.ktLint)
+        plugin(Config.Plugins.detekt)
+    }
+
+    ktlint {
+        debug.set(true)
+        version.set(Versions.ktLintSnapshotVersion)
+        verbose.set(true)
+        android.set(false)
+        outputToConsole.set(true)
+        ignoreFailures.set(false)
+        enableExperimentalRules.set(true)
+        filter {
+            exclude("**/generated/**")
+            include("**/kotlin/**")
+        }
+    }
+
+    detekt {
+        config = rootProject.files("config/detekt/detekt.yml")
+        tasks.detekt {
+            reports {
+                html {
+                    outputLocation.set(file("build/reports/detekt.html"))
+                    required.set(true) // reports can also be enabled and disabled at the task level as needed
+                }
+            }
+        }
     }
 }
 

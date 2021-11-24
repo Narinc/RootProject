@@ -1,20 +1,19 @@
 import dependencies.UiDep
 
 plugins {
-    id(Config.Plugins.android)
-    id(Config.Plugins.kotlinAndroid)
+    id(Config.Plugins.androidApplication)
+    kotlin(Config.Plugins.kotlinAndroid)
 }
 
 android {
-    compileSdk = Config.Android.androidCompileSdkVersion
-    buildToolsVersion = Config.Android.androidBuildToolsVersion
+    compileSdk = Config.Sdk.compileSdkVersion
 
     defaultConfig {
         applicationId = Environments.Release.appId
-        minSdk = Config.Android.androidMinSdkVersion
-        targetSdk = Config.Android.androidTargetSdkVersion
-        versionCode = Environments.Release.appVersionCode
-        versionName = Environments.Release.appVersionName
+        minSdk = Config.Sdk.minSdkVersion
+        targetSdk = Config.Sdk.targetSdkVersion
+        versionCode = Environments.Release.versionCode
+        versionName = Environments.Release.versionName
 
         testInstrumentationRunner = Config.testRunner
 
@@ -51,6 +50,7 @@ android {
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
 
+    implementation(kotlin("stdlib", Versions.kotlinVersion))
     implementation(UiDep.coreKtx)
     implementation(UiDep.appCompat)
     implementation(UiDep.material)

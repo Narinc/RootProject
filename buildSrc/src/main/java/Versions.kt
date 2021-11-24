@@ -3,6 +3,8 @@ object Versions {
     const val gradleVersion = "7.0.3"
     const val kotlinVersion = "1.5.20"
     const val ktLintVersion = "10.2.0"
+    const val ktLintSnapshotVersion = "0.43.0"
+    const val detektVersion = "1.19.0-RC1"
 
     // Core dependencies
     const val coreKtxVersion = "1.7.0"
