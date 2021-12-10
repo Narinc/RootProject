@@ -4,6 +4,7 @@ plugins {
     kotlin(Config.Plugins.kotlinAndroid) apply false
     id(Config.Plugins.ktLint) version (Versions.ktLintVersion)
     id(Config.Plugins.detekt) version (Versions.detektVersion)
+    id(Config.Plugins.benManes) version (Versions.benManesVersion)
 }
 
 allprojects {
@@ -18,6 +19,7 @@ subprojects {
     apply {
         plugin(Config.Plugins.ktLint)
         plugin(Config.Plugins.detekt)
+        plugin(Config.Plugins.benManes)
     }
 
     ktlint {
@@ -47,6 +49,14 @@ subprojects {
     }
 }
 
-tasks.register("clean", Delete::class.java) {
-    delete(rootProject.buildDir)
+tasks {
+    register("clean", Delete::class.java) {
+        delete(rootProject.buildDir)
+    }
+
+    withType<com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask> {
+        rejectVersionIf {
+            candidate.version.isStableVersion().not()
+        }
+    }
 }

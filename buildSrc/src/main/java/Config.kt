@@ -13,6 +13,7 @@ object Config {
         const val kotlinAndroid = "android"
         const val ktLint = "org.jlleitschuh.gradle.ktlint"
         const val detekt = "io.gitlab.arturbosch.detekt"
+        const val benManes = "com.github.ben-manes.versions"
     }
 
     const val testRunner = "androidx.test.runner.AndroidJUnitRunner"
