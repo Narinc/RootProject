@@ -9,16 +9,11 @@ android {
     compileSdk = Config.Sdk.compileSdkVersion
 
     defaultConfig {
-        applicationId = Environments.Release.appId
+        applicationId = Environments.appId
         minSdk = Config.Sdk.minSdkVersion
         targetSdk = Config.Sdk.targetSdkVersion
-        versionCode = Environments.Release.versionCode
-        versionName = Environments.Release.versionName
 
         testInstrumentationRunner = Config.testRunner
-
-        // Configs
-        buildConfigField("String", "BASE_URL", "\"" + Environments.Release.baseUrl + "\"")
     }
 
     buildTypes {
@@ -30,6 +25,10 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+        }
+
+        create("uat") {
+            initWith(getByName("release"))
         }
     }
 
@@ -44,6 +43,31 @@ android {
 
     buildFeatures {
         viewBinding = true
+    }
+
+    lint {
+        isWarningsAsErrors = true
+        isAbortOnError = true
+    }
+
+    flavorDimensions.add("server")
+    productFlavors {
+        create("dev") {
+            dimension = "server"
+            applicationIdSuffix = ".dev"
+            versionCode = Environments.Development.versionCode
+            versionName = Environments.Development.versionName
+
+            buildConfigField("String", "BASE_URL", "\"" + Environments.Development.baseUrl + "\"")
+        }
+        create("prod") {
+            dimension = "server"
+            applicationIdSuffix = ".prod"
+            versionCode = Environments.Production.versionCode
+            versionName = Environments.Production.versionName
+
+            buildConfigField("String", "BASE_URL", "\"" + Environments.Production.baseUrl + "\"")
+        }
     }
 }
 
