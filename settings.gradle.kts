@@ -17,4 +17,8 @@ pluginManagement {
 }
 
 rootProject.name = "RootProject"
-include(":app")
+
+include(
+    "app",
+    "presenter"
+)
