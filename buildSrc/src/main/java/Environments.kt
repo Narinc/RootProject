@@ -16,3 +16,8 @@ object PresenterEnvironments {
     const val LIBRARY_VERSION = "1.0.0"
     const val LIBRARY_VERSION_CODE = 1
 }
+
+object CacheEnvironments {
+    const val LIBRARY_VERSION = "1.0.0"
+    const val LIBRARY_VERSION_CODE = 1
+}
