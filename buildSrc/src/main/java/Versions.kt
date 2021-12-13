@@ -2,7 +2,7 @@ object Versions {
 
     const val kotlinVersion = "1.6.0"
     const val ktLintVersion = "10.2.0"
-    const val ktLintSnapshotVersion = "0.43.2"
+    const val ktLintSnapshotVersion = "0.42.1"
     const val detektVersion = "1.19.0"
     const val benManesVersion = "0.39.0"
 
@@ -28,7 +28,7 @@ object Versions {
     const val hiltVersion = "1.0.0"
 
     // Room
-    const val roomVersion = "2.2.5"
+    const val roomVersion = "2.4.0-rc01"
 
     // Testing
     const val junitVersion = "4.13.2"

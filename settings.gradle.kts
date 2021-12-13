@@ -24,3 +24,4 @@ include(
     "domain",
     "data"
 )
+include(":cache")
