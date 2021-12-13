@@ -1,3 +1,5 @@
+import dependencies.PresentationDep
+
 version = PresenterEnvironments.LIBRARY_VERSION
 
 plugins {
@@ -45,29 +47,29 @@ android {
 dependencies {
     // implementation(project(Modules.domain))
 
-    implementation(DepPresentation.kotlin)
-    implementation(DepPresentation.coroutineCore)
+    implementation(PresentationDep.kotlin)
+    implementation(PresentationDep.coroutineCore)
     // Dagger-Hilt (used for @InjectViewModel)
-    DepPresentation.daggerHilt.forEach {
+    PresentationDep.daggerHilt.forEach {
         implementation(it)
     }
-    DepPresentation.daggerHiltKapt.forEach {
+    PresentationDep.daggerHiltKapt.forEach {
         kapt(it)
     }
     // JavaX
-    implementation(DepPresentation.javax)
+    implementation(PresentationDep.javax)
     // LifeCycle
-    DepPresentation.lifeCycle.forEach {
+    PresentationDep.lifeCycle.forEach {
         implementation(it)
     }
 
     // Test Dependencies
-    testImplementation(DepPresentation.Test.junit)
-    testImplementation(DepPresentation.Test.assertJ)
-    testImplementation(DepPresentation.Test.mockitoKotlin)
-    testImplementation(DepPresentation.Test.mockitoInline)
-    testImplementation(DepPresentation.Test.coroutines)
-    testImplementation(DepPresentation.Test.androidxArchCore)
-    testImplementation(DepPresentation.Test.robolectric)
-    testImplementation(DepPresentation.Test.testExtJunit)
+    testImplementation(PresentationDep.Test.junit)
+    testImplementation(PresentationDep.Test.assertJ)
+    testImplementation(PresentationDep.Test.mockitoKotlin)
+    testImplementation(PresentationDep.Test.mockitoInline)
+    testImplementation(PresentationDep.Test.coroutines)
+    testImplementation(PresentationDep.Test.androidxArchCore)
+    testImplementation(PresentationDep.Test.robolectric)
+    testImplementation(PresentationDep.Test.testExtJunit)
 }

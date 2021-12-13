@@ -20,5 +20,6 @@ rootProject.name = "RootProject"
 
 include(
     "app",
-    "presenter"
+    "presenter",
+    "domain"
 )

@@ -1,6 +1,8 @@
+package dependencies
+
 import dependencies.Dependencies
 
-object DepPresentation {
+object PresentationDep {
     const val kotlin = Dependencies.KotlinDep.kotlin
     const val javax = Dependencies.JavaDep.javax
     const val coroutineCore = Dependencies.CoroutinesDep.coroutineCore
