@@ -9,7 +9,7 @@ android {
     compileSdk = Config.Sdk.compileSdkVersion
 
     defaultConfig {
-        applicationId = Environments.appId
+        applicationId = appId
         minSdk = Config.Sdk.minSdkVersion
         targetSdk = Config.Sdk.targetSdkVersion
 
@@ -55,18 +55,18 @@ android {
         create("dev") {
             dimension = "server"
             applicationIdSuffix = ".dev"
-            versionCode = Environments.Development.versionCode
-            versionName = Environments.Development.versionName
+            versionCode = DevelopmentEnvironments.versionCode
+            versionName = DevelopmentEnvironments.versionName
 
-            buildConfigField("String", "BASE_URL", "\"" + Environments.Development.baseUrl + "\"")
+            buildConfigField("String", "BASE_URL", "\"" + DevelopmentEnvironments.baseUrl + "\"")
         }
         create("prod") {
             dimension = "server"
             applicationIdSuffix = ".prod"
-            versionCode = Environments.Production.versionCode
-            versionName = Environments.Production.versionName
+            versionCode = ProductionEnvironments.versionCode
+            versionName = ProductionEnvironments.versionName
 
-            buildConfigField("String", "BASE_URL", "\"" + Environments.Production.baseUrl + "\"")
+            buildConfigField("String", "BASE_URL", "\"" + ProductionEnvironments.baseUrl + "\"")
         }
     }
 }

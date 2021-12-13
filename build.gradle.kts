@@ -8,7 +8,7 @@ plugins {
 }
 
 allprojects {
-    group = Environments.appId
+    group = appId
     repositories {
         google()
         mavenCentral()
