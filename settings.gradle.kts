@@ -22,6 +22,7 @@ include(
     "app",
     "presenter",
     "domain",
-    "data"
+    "data",
+    "cache",
+    "remote"
 )
-include(":cache")

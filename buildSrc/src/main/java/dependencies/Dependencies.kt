@@ -43,6 +43,19 @@ object Dependencies {
             "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutineAndroidVersion}"
     }
 
+    object RetrofitDep {
+        const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofitVersion}"
+        const val moshiConverter =
+            "com.squareup.retrofit2:converter-moshi:${Versions.moshiConverterVersion}"
+    }
+
+    const val okHttpBOM = "com.squareup.okhttp3:okhttp-bom:${Versions.okHttpBOM}"
+
+    object OkHttpDep {
+        const val okHttp = "com.squareup.okhttp3:okhttp"
+        const val loggingInterceptor = "com.squareup.okhttp3:logging-interceptor"
+    }
+
     object RoomDep {
         const val roomRuntime = "androidx.room:room-runtime:${Versions.roomVersion}"
         const val roomCompilerKapt = "androidx.room:room-compiler:${Versions.roomVersion}"

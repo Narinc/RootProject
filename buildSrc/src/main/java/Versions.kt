@@ -27,6 +27,11 @@ object Versions {
     const val hiltAndroidVersion = "2.40.5"
     const val hiltVersion = "1.0.0"
 
+    // Network dependencies
+    const val retrofitVersion = "2.9.0"
+    const val moshiConverterVersion = "2.9.0"
+    const val okHttpBOM = "4.9.3"
+
     // Room
     const val roomVersion = "2.4.0-rc01"
 
