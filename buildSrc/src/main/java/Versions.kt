@@ -11,6 +11,13 @@ object Versions {
     const val coreKtxVersion = "1.7.0"
     const val appCompatVersion = "1.4.0"
     const val materialVersion = "1.4.0"
+    const val constraintLayoutVersion = "2.0.4"
+
+    // Activity KTX for viewModels() dependencies
+    const val activityKtxVersion = "1.1.0"
+
+    const val navFragmentKtxVersion = "2.3.0"
+    const val navUiKtxVersion = "2.3.0"
 
     // LifeCycle dependencies
     const val viewmodelKtxVersion = "2.4.0"
@@ -23,9 +30,15 @@ object Versions {
     const val coroutineCoreVersion = "1.6.0-RC2"
     const val coroutineAndroidVersion = "1.3.9"
 
+    //Glide dependencies
+    const val glideVersion = "4.11.0"
+
     // Dagger - Hilt dependencies
     const val hiltAndroidVersion = "2.40.5"
     const val hiltVersion = "1.0.0"
+
+    // Timber logging dependencies
+    const val timberVersion = "4.7.1"
 
     // Network dependencies
     const val retrofitVersion = "2.9.0"
@@ -34,6 +47,9 @@ object Versions {
 
     // Room
     const val roomVersion = "2.4.0-rc01"
+
+    // Lottie animation
+    const val lottieVersion = "3.7.0"
 
     // Testing
     const val junitVersion = "4.13.2"

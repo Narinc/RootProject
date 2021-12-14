@@ -3,6 +3,9 @@ import dependencies.UiDep
 plugins {
     id(Config.Plugins.androidApplication)
     kotlin(Config.Plugins.kotlinAndroid)
+    id(Config.Plugins.kotlinKapt)
+    id(Config.Plugins.dagger)
+    id(Config.Plugins.navigationSafArgs)
 }
 
 android {
@@ -38,7 +41,7 @@ android {
     }
 
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
 
     buildFeatures {
@@ -72,14 +75,59 @@ android {
 }
 
 dependencies {
-    implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
 
+    // Modules
+    implementation(project(Modules.domain))
+    implementation(project(Modules.data))
+    implementation(project(Modules.remote))
+    implementation(project(Modules.cache))
+    implementation(project(Modules.presentation))
+
+    // Core Dependencies
     implementation(kotlin("stdlib", Versions.kotlinVersion))
     implementation(UiDep.coreKtx)
     implementation(UiDep.appCompat)
     implementation(UiDep.material)
+    implementation(UiDep.constraint)
+    implementation(UiDep.navigationFragmentKtx)
+    implementation(UiDep.navigationUiKtx)
+    implementation(UiDep.activityKtx)
 
+    // LifeCycle
+    UiDep.LifeCycle.forEach {
+        implementation(it)
+    }
+
+    // Dagger-Hilt
+    UiDep.DaggerHilt.forEach {
+        implementation(it)
+    }
+    UiDep.DaggerHiltKapt.forEach {
+        kapt(it)
+    }
+
+    // Coroutines
+    UiDep.Coroutines.forEach {
+        implementation(it)
+    }
+
+    // Glide
+    implementation(UiDep.glide)
+    kapt(UiDep.glideKapt)
+
+    // Timber
+    implementation(UiDep.timber)
+
+    // Lottie animation
+    implementation(UiDep.lottie)
+
+    // Test Dependencies
     testImplementation(UiDep.Test.junit)
-    androidTestImplementation(UiDep.Test.testExtJunit)
-    androidTestImplementation(UiDep.Test.espressoCore)
+    testImplementation(UiDep.Test.assertJ)
+    testImplementation(UiDep.Test.mockitoKotlin)
+    testImplementation(UiDep.Test.mockitoInline)
+    testImplementation(UiDep.Test.coroutines)
+    testImplementation(UiDep.Test.androidxArchCore)
+    testImplementation(UiDep.Test.robolectric)
+    testImplementation(UiDep.Test.testExtJunit)
 }
