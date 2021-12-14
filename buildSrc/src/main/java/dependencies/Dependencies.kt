@@ -14,6 +14,13 @@ object Dependencies {
         const val coreKtx = "androidx.core:core-ktx:${Versions.coreKtxVersion}"
         const val appCompat = "androidx.appcompat:appcompat:${Versions.appCompatVersion}"
         const val material = "com.google.android.material:material:${Versions.materialVersion}"
+        const val constraint =
+            "androidx.constraintlayout:constraintlayout:${Versions.constraintLayoutVersion}"
+        const val navigationFragmentKtx =
+            "androidx.navigation:navigation-fragment-ktx:${Versions.navFragmentKtxVersion}"
+        const val navigationUiKtx =
+            "androidx.navigation:navigation-ui-ktx:${Versions.navUiKtxVersion}"
+        const val activityKtx = "androidx.activity:activity-ktx:${Versions.activityKtxVersion}"
     }
 
     object LifeCycleDep {
@@ -43,6 +50,15 @@ object Dependencies {
             "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutineAndroidVersion}"
     }
 
+    object GlideDep {
+        const val glide = "com.github.bumptech.glide:glide:${Versions.glideVersion}"
+        const val glideKapt = "com.github.bumptech.glide:compiler:${Versions.glideVersion}"
+    }
+
+    object TimberDep {
+        const val timber = "com.jakewharton.timber:timber:${Versions.timberVersion}"
+    }
+
     object RetrofitDep {
         const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofitVersion}"
         const val moshiConverter =
@@ -60,6 +76,10 @@ object Dependencies {
         const val roomRuntime = "androidx.room:room-runtime:${Versions.roomVersion}"
         const val roomCompilerKapt = "androidx.room:room-compiler:${Versions.roomVersion}"
         const val roomKtx = "androidx.room:room-ktx:${Versions.roomVersion}"
+    }
+
+    object LottieDep {
+        const val lottie = "com.airbnb.android:lottie:${Versions.lottieVersion}"
     }
 
     object TestDep {
