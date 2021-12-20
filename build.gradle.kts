@@ -7,6 +7,8 @@ plugins {
     id(Config.Plugins.benManes) version (Versions.benManesVersion)
 }
 
+apply(from = "gradle/jacoco.gradle")
+
 allprojects {
     group = appId
     repositories {
