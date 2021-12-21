@@ -30,6 +30,10 @@ android {
             )
         }
 
+        getByName("debug") {
+            isTestCoverageEnabled = true
+        }
+
         create("uat") {
             initWith(getByName("release"))
         }
