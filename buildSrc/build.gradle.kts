@@ -6,6 +6,7 @@ repositories {
     google()
     mavenCentral()
     gradlePluginPortal()
+    maven { setUrl("https://developer.huawei.com/repo/")  }
 }
 
 object Plugins {
@@ -13,6 +14,9 @@ object Plugins {
     const val KOTLIN = "1.6.10"
     const val HILT = "2.40.5"
     const val NAVIGATION = "2.3.5"
+    const val GMS = "4.3.10"
+    const val FIREBASE_CRASHLYTICS = "2.8.1"
+    const val AGCONNECT = "1.4.1.300"
 }
 
 dependencies {
@@ -20,4 +24,7 @@ dependencies {
     implementation("com.android.tools.build:gradle:${Plugins.AGP}")
     implementation("com.google.dagger:hilt-android-gradle-plugin:${Plugins.HILT}")
     implementation("androidx.navigation:navigation-safe-args-gradle-plugin:${Plugins.NAVIGATION}")
+    implementation("com.google.gms:google-services:${Plugins.GMS}")
+    implementation("com.google.firebase:firebase-crashlytics-gradle:${Plugins.FIREBASE_CRASHLYTICS}")
+    implementation("com.huawei.agconnect:agcp:${Plugins.AGCONNECT}")
 }

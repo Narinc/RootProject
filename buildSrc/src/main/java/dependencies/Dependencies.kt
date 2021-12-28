@@ -82,6 +82,21 @@ object Dependencies {
         const val lottie = "com.airbnb.android:lottie:${Versions.lottieVersion}"
     }
 
+    object Firebase {
+        const val bom = "com.google.firebase:firebase-bom:${Versions.firebase}"
+        const val messaging = "com.google.firebase:firebase-messaging"
+        const val analytics = "com.google.firebase:firebase-analytics"
+        const val crashlytics = "com.google.firebase:firebase-crashlytics"
+        const val config = "com.google.firebase:firebase-config"
+    }
+
+    object Huawei {
+        const val analytics = "com.huawei.hms:hianalytics:${Versions.analytics}"
+        const val crash = "com.huawei.agconnect:agconnect-crash:${Versions.crash}"
+        const val push = "com.huawei.hms:push:${Versions.push}"
+        const val remoteConfig = "com.huawei.agconnect:agconnect-remoteconfig:${Versions.remoteConfig}"
+    }
+
     object TestDep {
         const val coroutinesTest =
             "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.coroutinesTestVersion}"

@@ -24,5 +24,6 @@ include(
     "domain",
     "data",
     "cache",
-    "remote"
+    "remote",
+    "mobileservices"
 )

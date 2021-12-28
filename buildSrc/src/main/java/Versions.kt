@@ -27,8 +27,8 @@ object Versions {
     const val lifeCycleRuntimeKtxVersion = "2.4.0"
 
     // Coroutines dependencies
-    const val coroutineCoreVersion = "1.6.0-RC2"
-    const val coroutineAndroidVersion = "1.6.0-RC2"
+    const val coroutineCoreVersion = "1.6.0"
+    const val coroutineAndroidVersion = "1.6.0"
 
     //Glide dependencies
     const val glideVersion = "4.12.0"
@@ -51,12 +51,21 @@ object Versions {
     // Lottie animation
     const val lottieVersion = "4.2.2"
 
+    //Firebase
+    const val firebase = "29.0.3"
+
+    // HMS
+    const val analytics = "5.0.5.300"
+    const val crash = "1.4.2.301"
+    const val push = "5.0.0.300"
+    const val remoteConfig = "1.4.2.301"
+
     // Testing
     const val junitVersion = "4.13.2"
     const val androidxArchCoreVersion = "2.1.0"
-    const val coroutinesTestVersion = "1.6.0-RC2"
+    const val coroutinesTestVersion = "1.6.0"
     const val mockitoCoreVersion = "2.25.1"
-    const val mockitoInlineVersion = "4.1.0"
+    const val mockitoInlineVersion = "4.2.0"
     const val mockitoAndroidVersion = "2.23.4"
     const val mockitoKotlinVersion = "2.2.0"
     const val assertJVersion = "3.21.0"
