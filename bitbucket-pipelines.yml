@@ -43,11 +43,11 @@ pipelines:
         #      script:
         #        - ./gradlew testDebugUnitTest # test reporting is automatically enabled https://support.atlassian.com/bitbucket-cloud/docs/test-reporting-in-pipelines/
 
-          - step:
-              name: Dependency Version Check
-              caches:
-                - gradle
-              script:
-                - ./gradlew dependencyUpdates
-              artifacts:
-                - app/build/dependenyUpdates/**
+        # - step:
+        #     name: Dependency Version Check
+        #     caches:
+        #       - gradle
+        #     script:
+        #       - ./gradlew dependencyUpdates
+        #     artifacts:
+        #       - app/build/dependenyUpdates/**
