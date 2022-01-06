@@ -55,10 +55,10 @@ object Versions {
     const val firebase = "29.0.3"
 
     // HMS
-    const val analytics = "5.0.5.300"
-    const val crash = "1.4.2.301"
-    const val push = "5.0.0.300"
-    const val remoteConfig = "1.4.2.301"
+    const val analytics = "6.3.2.300"
+    const val crash = "1.6.3.200"
+    const val push = "6.3.0.300"
+    const val remoteConfig = "1.6.3.200"
 
     // Testing
     const val junitVersion = "4.13.2"

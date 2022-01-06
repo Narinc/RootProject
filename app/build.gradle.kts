@@ -81,6 +81,7 @@ android {
 dependencies {
 
     // Modules
+    implementation(project(Modules.mobileServices))
     implementation(project(Modules.domain))
     implementation(project(Modules.data))
     implementation(project(Modules.remote))

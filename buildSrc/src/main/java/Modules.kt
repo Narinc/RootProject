@@ -4,4 +4,5 @@ object Modules {
     const val remote = ":remote"
     const val domain = ":domain"
     const val presentation = ":presentation"
+    const val mobileServices = ":mobileservices"
 }
