@@ -1,4 +1,4 @@
-package com.narinc.rootproject
+package com.narinc.rootproject.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
