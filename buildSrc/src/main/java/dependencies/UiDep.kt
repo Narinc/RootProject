@@ -25,8 +25,7 @@ object UiDep {
     )
 
     val DaggerHiltKapt = listOf(
-        Dependencies.DaggerHiltDep.hiltAndroidKapt,
-        Dependencies.DaggerHiltDep.hiltKapt
+        Dependencies.DaggerHiltDep.hiltAndroidKapt
     )
 
     // Coroutines
