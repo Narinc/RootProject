@@ -1,7 +1,5 @@
 package dependencies
 
-import dependencies.Dependencies
-
 object PresentationDep {
     const val kotlin = Dependencies.KotlinDep.kotlin
     const val javax = Dependencies.JavaDep.javax
@@ -12,8 +10,7 @@ object PresentationDep {
         Dependencies.DaggerHiltDep.hiltAndroid
     )
     val daggerHiltKapt = listOf(
-        Dependencies.DaggerHiltDep.hiltAndroidKapt,
-        Dependencies.DaggerHiltDep.hiltKapt
+        Dependencies.DaggerHiltDep.hiltAndroidKapt
     )
     val lifeCycle = listOf(
         Dependencies.LifeCycleDep.viewModelKtx,

@@ -1,10 +1,10 @@
 object Versions {
 
     const val kotlinVersion = "1.6.10"
-    const val ktLintVersion = "10.2.0"
+    const val ktLintVersion = "10.2.1"
     const val ktLintSnapshotVersion = "0.43.2"
     const val detektVersion = "1.19.0"
-    const val benManesVersion = "0.39.0"
+    const val benManesVersion = "0.41.0"
 
     // Core dependencies
     const val javaxInjectVersion = "1"
@@ -46,7 +46,7 @@ object Versions {
     const val okHttpBOM = "4.9.3"
 
     // Room
-    const val roomVersion = "2.4.0-rc01"
+    const val roomVersion = "2.4.0"
 
     // Lottie animation
     const val lottieVersion = "4.2.2"
@@ -68,11 +68,11 @@ object Versions {
     const val mockitoInlineVersion = "4.2.0"
     const val mockitoAndroidVersion = "2.23.4"
     const val mockitoKotlinVersion = "2.2.0"
-    const val assertJVersion = "3.21.0"
+    const val assertJVersion = "3.22.0"
     const val extJunitVersion = "1.1.1"
     const val androidTestRuleVersion = "1.1.0"
     const val androidTestRunnerVersion = "1.1.0"
-    const val axTestCore = "1.1.0"
+    const val axTestCore = "1.4.0"
     const val axTestJunit = "1.1.3"
     const val espressoVersion = "3.4.0"
     const val robolectricVersion = "4.7.3"
