@@ -6,7 +6,7 @@ class InitializerDispatcherImp : InitializerDispatcher {
 
     private val dispatchers: List<InitializerDispatcher> by lazy {
         buildList {
-            // add diaspathers
+            TimberInitializerDispatcher()
         }
     }
 
