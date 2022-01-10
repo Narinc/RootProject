@@ -18,8 +18,15 @@ class MobileServices(context: Context) {
         }
     }
 
-    fun getAnalyticDispatcher(): AnalyticsDispatcher {
-        return services.getAnalyticsDispatcher()
+    fun getAnalyticDispatchers(context: Context): List<AnalyticsDispatcher> {
+        val dispatchers: MutableList<AnalyticsDispatcher> = mutableListOf()
+        if (isGmsAvailable(context)) {
+            dispatchers.add(Services.GMS.getAnalyticsDispatcher())
+        }
+        if (isHmsAvailable(context)) {
+            dispatchers.add(Services.HMS.getAnalyticsDispatcher())
+        }
+        return dispatchers
     }
 
     fun getRemoteConfigProvider(context: Context): RemoteConfigProvider {
