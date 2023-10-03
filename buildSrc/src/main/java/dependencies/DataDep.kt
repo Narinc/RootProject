@@ -4,6 +4,7 @@ object DataDep {
     const val kotlin = Dependencies.KotlinDep.kotlin
     const val javax = Dependencies.JavaDep.javax
     const val coroutineCore = Dependencies.CoroutinesDep.coroutineCore
+    const val detektFormatting = Config.Plugins.detektFormatting
 
     object Test {
         const val junit = Dependencies.TestDep.junit

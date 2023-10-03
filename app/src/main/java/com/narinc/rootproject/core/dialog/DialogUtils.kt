@@ -19,7 +19,7 @@ var loadingDialog: Dialog? = null
 
 fun Fragment.showLoadingDialog(
     cancelable: Boolean = false,
-    canceledOnTouchOutside: Boolean = false
+    canceledOnTouchOutside: Boolean = false,
 ): AlertDialog? {
     return MaterialAlertDialogBuilder(context ?: return null).apply {
         setView(R.layout.layout_loading_dialog)
@@ -48,7 +48,7 @@ fun Fragment.showLoadingDialog(
 
 fun AppCompatActivity.showLoadingDialog(
     cancelable: Boolean = false,
-    canceledOnTouchOutside: Boolean = false
+    canceledOnTouchOutside: Boolean = false,
 ): AlertDialog {
     return MaterialAlertDialogBuilder(this).apply {
         setView(R.layout.layout_loading_dialog)
@@ -86,6 +86,7 @@ fun dismissLoadingDialog() {
  */
 var showingDialog: Dialog? = null
 
+@Suppress("LongParameterList")
 fun Fragment.showDialog(
     title: String? = null,
     message: String? = null,
@@ -94,7 +95,7 @@ fun Fragment.showDialog(
     textNegative: String? = null,
     negativeListener: (() -> Unit)? = null,
     cancelable: Boolean = false,
-    canceledOnTouchOutside: Boolean = false
+    canceledOnTouchOutside: Boolean = false,
 ): AlertDialog? {
     return MaterialAlertDialogBuilder(context ?: return null).apply {
         setTitle(title)
@@ -130,6 +131,7 @@ fun Fragment.showDialog(
     }
 }
 
+@Suppress("LongParameterList")
 fun AppCompatActivity.showDialog(
     title: String? = null,
     message: String? = null,
@@ -138,7 +140,7 @@ fun AppCompatActivity.showDialog(
     textNegative: String? = null,
     negativeListener: (() -> Unit)? = null,
     cancelable: Boolean = false,
-    canceledOnTouchOutside: Boolean = false
+    canceledOnTouchOutside: Boolean = false,
 ): AlertDialog {
     return MaterialAlertDialogBuilder(this).apply {
         setTitle(title)
