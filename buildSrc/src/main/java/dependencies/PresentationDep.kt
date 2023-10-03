@@ -4,6 +4,7 @@ object PresentationDep {
     const val kotlin = Dependencies.KotlinDep.kotlin
     const val javax = Dependencies.JavaDep.javax
     const val coroutineCore = Dependencies.CoroutinesDep.coroutineCore
+    const val detektFormatting = Config.Plugins.detektFormatting
 
     // Dagger-Hilt
     val daggerHilt = listOf(

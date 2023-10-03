@@ -13,6 +13,7 @@ object RemoteDep {
         Dependencies.OkHttpDep.loggingInterceptor
     )
     const val coroutineCore = Dependencies.CoroutinesDep.coroutineCore
+    const val detektFormatting = Config.Plugins.detektFormatting
 
     object Test {
         const val junit = Dependencies.TestDep.junit

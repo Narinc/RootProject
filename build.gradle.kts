@@ -39,7 +39,7 @@ subprojects {
     }
 
     detekt {
-        config = rootProject.files("config/detekt/detekt.yml")
+        config.setFrom(rootProject.files("config/detekt/detekt.yml"))
         tasks.detekt {
             reports {
                 html {
