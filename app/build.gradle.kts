@@ -9,6 +9,7 @@ plugins {
 }
 
 android {
+    namespace = Config.Project.Namespace
     compileSdk = Config.Sdk.compileSdkVersion
 
     defaultConfig {
@@ -31,7 +32,7 @@ android {
         }
 
         getByName("debug") {
-            isTestCoverageEnabled = true
+            enableUnitTestCoverage = true
         }
 
         create("uat") {
@@ -40,21 +41,22 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_1_8.toString()
+        jvmTarget = JavaVersion.VERSION_17.toString()
     }
 
     buildFeatures {
         viewBinding = true
+        buildConfig = true
     }
 
     lint {
-        isWarningsAsErrors = true
-        isAbortOnError = true
+        warningsAsErrors = true
+        abortOnError = true
     }
 
     flavorDimensions.add("server")
