@@ -23,6 +23,7 @@ object Config {
         const val androidLibrary = "com.android.library"
         const val ktLint = "org.jlleitschuh.gradle.ktlint"
         const val detekt = "io.gitlab.arturbosch.detekt"
+        const val detektFormatting = "io.gitlab.arturbosch.detekt:detekt-formatting:${Versions.detektVersion}"
         const val benManes = "com.github.ben-manes.versions"
     }
 

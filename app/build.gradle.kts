@@ -27,7 +27,7 @@ android {
             isShrinkResources = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                "proguard-rules.pro",
             )
         }
 
@@ -136,4 +136,6 @@ dependencies {
     testImplementation(UiDep.Test.androidxArchCore)
     testImplementation(UiDep.Test.robolectric)
     testImplementation(UiDep.Test.testExtJunit)
+
+    detektPlugins(UiDep.detektFormatting)
 }

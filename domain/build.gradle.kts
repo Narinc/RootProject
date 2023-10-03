@@ -23,4 +23,6 @@ dependencies {
     testImplementation(DomainDep.Test.mockitoKotlin)
     testImplementation(DomainDep.Test.mockitoInline)
     testImplementation(DomainDep.Test.coroutines)
+
+    detektPlugins(DomainDep.detektFormatting)
 }

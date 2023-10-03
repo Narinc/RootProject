@@ -5,6 +5,7 @@ object CacheDep {
     const val javax = Dependencies.JavaDep.javax
     val room = listOf(Dependencies.RoomDep.roomRuntime, Dependencies.RoomDep.roomKtx)
     const val roomKapt = Dependencies.RoomDep.roomCompilerKapt
+    const val detektFormatting = Config.Plugins.detektFormatting
 
     object Test {
         const val junit = Dependencies.TestDep.junit

@@ -38,6 +38,7 @@ object UiDep {
     const val glideKapt = Dependencies.GlideDep.glideKapt
     const val timber = Dependencies.TimberDep.timber
     const val lottie = Dependencies.LottieDep.lottie
+    const val detektFormatting = Config.Plugins.detektFormatting
 
     object Test {
         const val junit = Dependencies.TestDep.junit

@@ -39,7 +39,7 @@ android {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                "proguard-rules.pro",
             )
         }
     }
@@ -65,4 +65,6 @@ dependencies {
     testImplementation(CacheDep.Test.testExtJunit)
     testImplementation(CacheDep.Test.robolectric)
     testImplementation(CacheDep.Test.roomTest)
+
+    detektPlugins(CacheDep.detektFormatting)
 }
